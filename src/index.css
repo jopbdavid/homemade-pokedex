@@ -1,13 +1,179 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 16px;
+  text-align: center;
+  background: linear-gradient(to bottom, #6ab7f5, #fff);
+  min-height: 100vh;
+}
+
+.title {
+  width: 20%;
+  height: 15%;
+  display: block;
+  transform: translate(200%);
+}
+
+/* POKEDEX */
+
+.pokedex-body {
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+}
+
+.pokedex-img {
+  /* position: absolute; */
+  width: 100%;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .pokedex-img {
+    width: 100%;
+    max-width: 600px;
+  }
+  .pokemon-name {
+    font-size: 0.8rem;
+  }
+  .btn-prev,
+  .btn-next {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .pokemon-name {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .pokemon-name {
+    font-size: 0.5rem;
+  }
+}
+
+/* POKEMON */
+
+.pokemon-img {
+  position: absolute;
+
+  width: 30%;
+  left: 12%;
+  top: 23%;
+}
+
+.pokemon-name {
+  position: absolute;
+  top: 37.5%;
+  right: 17%;
+  color: aliceblue;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+/* BUTTONS */
+
+.btn-prev {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 12%;
+  right: 25.5%;
+  width: 15%;
+  height: 5%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-weight: 600;
+  color: whitesmoke;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  font-size: clamp(10px, 0.9rem, 1rem);
+}
+.btn-prev:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.8rem;
+}
+
+.btn-next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 12%;
+  right: 8.5%;
+  width: 15%;
+  height: 5%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-weight: 600;
+  color: whitesmoke;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  font-size: clamp(10px, 0.9rem, 1rem);
+}
+.btn-next:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 780px) {
+  .btn-prev,
+  .btn-next {
+    font-size: 0.7rem;
+  }
+
+  .btn-prev:active,
+  .btn-next:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .btn-prev,
+  .btn-next {
+    font-size: 0.6rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    bottom: 15%;
+  }
+
+  .btn-prev:active,
+  .btn-next:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btn-prev,
+  .btn-next {
+    font-size: 0.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    bottom: 17%;
+    border: 1px solid #000;
+    border-radius: 2.5px;
+    font-weight: 500;
+    box-shadow: -1px 2px 0 #222, -2px 3px 0 #000;
+  }
+
+  .btn-prev:active,
+  .btn-next:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.55rem;
+  }
 }
